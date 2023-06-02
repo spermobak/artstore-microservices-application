@@ -1,2 +1,5 @@
 rootProject.name = 'artstore-microservice-application'
 
+includeBuild 'eureka-server'
+includeBuild 'api-gateway'
+includeBuild 'user-service'
