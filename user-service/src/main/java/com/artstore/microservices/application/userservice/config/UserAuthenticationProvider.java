@@ -55,8 +55,8 @@ public class UserAuthenticationProvider {
 
         UserDTO user = UserDTO.builder()
                 .login(decoded.getIssuer())
-                .fullName(decoded.getClaim("firstName").asString())
-                .email(decoded.getClaim("lastName").asString())
+                .fullName(decoded.getClaim("fullName").asString())
+                .email(decoded.getClaim("email").asString())
                 .build();
 
         return new UsernamePasswordAuthenticationToken(user, null, Collections.emptyList());
